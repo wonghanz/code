@@ -1,0 +1,16 @@
+<html>
+<head>
+<script>
+function goToWebsite() {
+  var code = document.getElementById("code").value;
+  var website = "https://www." + code + ".com";
+  window.location.href = website;
+}
+</script>
+</head>
+<body>
+<h1>Enter a code to go to a website</h1>
+<input type="text" id="code" placeholder="Enter code here">
+<button onclick="goToWebsite()">Go</button>
+</body>
+</html>
