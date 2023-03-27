@@ -87,8 +87,21 @@
   animation-name: zoom-in;
   animation-duration: 2s;
 }
+
+</style>
+</head>
+<body>
+<div class="splash">
+<div class="title">I-Plantation</div>
+<div class="logo"></div>
+<div class="text">Welcome to my amazing website!</div>
+</div>
+
+<!-- Add the sound files using audio element -->
 <audio id="sound1" src="sound1.mp3"></audio>
 <audio id="sound2" src="sound2.mp3"></audio>
+
+<script>
 // Get the elements that have animations
 var logo = document.querySelector(".logo");
 var text = document.querySelector(".text");
@@ -99,20 +112,13 @@ var sound2 = document.getElementById("sound2");
 
 // Add an event listener to play sound1 when logo animation starts
 logo.addEventListener("animationstart", function() {
-  sound1.play();
+ sound1.play();
 });
 
 // Add an event listener to play sound2 when text animation ends
 text.addEventListener("animationend", function() {
-  sound2.play();
+ sound2.play();
 });
-</style>
-</head>
-<body>
-<div class="splash">
-<div class="title">I-Plantation</div>
-<div class="logo"></div>
-<div class="text">Welcome to my amazing website!</div>
-</div>
+</script>
 </body>
 </html>
