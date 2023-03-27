@@ -1,16 +1,64 @@
 <html>
 <head>
-<script>
-function goToWebsite() {
-  var code = document.getElementById("code").value;
-  var website = "https://www." + code + ".com";
-  window.location.href = website;
+<style>
+/* Define the style for the splash screen */
+.splash {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-</script>
+
+/* Define the style for the logo */
+.logo {
+  width: 300px;
+  height: 300px;
+  background-image: url("logo.png"); /* Replace with your logo image URL */
+  background-size: cover;
+}
+
+/* Define the style for the text */
+.text {
+  color: white;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Define the style for the title */
+.title {
+  color: white;
+  font-size: 60px;
+  font-family: Arial, sans-serif;
+}
+
+/* Define the animation for the logo */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to the logo */
+.logo {
+  animation-name: spin;
+  animation-duration: 2s;
+}
+
+</style>
 </head>
 <body>
-<h1>Enter a code to go to a website</h1>
-<input type="text" id="code" placeholder="Enter code here">
-<button onclick="goToWebsite()">Go</button>
+<div class="splash">
+<div class="title">I-Plantation</div>
+<div class="logo"></div>
+<div class="text">Welcome to my amazing website!</div>
+</div>
 </body>
 </html>
